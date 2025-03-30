@@ -39,4 +39,7 @@ container.appendChild(productElement);});}
 // Task 5: Reusable Error Handler //
 function handleError(error) {
 console.error('An error occurred:', error.message);} // Function to log errors 
-    
+
+// Task 6: Call Your Fetch Functions //
+fetchProductsThen();
+fetchProductsAsync(); // // Calling both fetch methods

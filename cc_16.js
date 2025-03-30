@@ -35,5 +35,8 @@ productElement.innerHTML = `
      <p>$${(product.fields.price / 100).toFixed(2)}</p> `; // Inner HTML with information 
           
 container.appendChild(productElement);});}
-    
+
+// Task 5: Reusable Error Handler //
+function handleError(error) {
+console.error('An error occurred:', error.message);} // Function to log errors 
     

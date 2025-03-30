@@ -17,4 +17,23 @@ const data = await response.json();// Convert the response to JSON format
 displayProducts(data);}// // Display the fetched products on the page
  catch (error) {
  handleError(error);}} // Handling any errors
+
+ // Task 4: Display the Products //
+function displayProducts(products) {
+ const container = document.getElementById('product-container');
+container.innerHTML = ''; // Clears content
+        
+const productsToShow = products.slice(0, 5);// Only show first 5 products
+        
+productsToShow.forEach(product => {
+const productElement = document.createElement('div');
+ productElement.className = 'product'; // Create and append HTML elements for each product
+          
+productElement.innerHTML = `
+     <img src="${product.fields.image[0].url}" alt="${product.fields.name}" width="200">
+    <h3>${product.fields.name}</h3>
+     <p>$${(product.fields.price / 100).toFixed(2)}</p> `; // Inner HTML with information 
+          
+container.appendChild(productElement);});}
+    
     
